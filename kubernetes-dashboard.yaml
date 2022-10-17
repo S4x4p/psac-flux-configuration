@@ -1,0 +1,14 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: HelmRelease
+metadata:
+    name: kubernetes-dashboard
+    namespace: default
+spec:
+    chart: 
+      spec:
+        chart:
+          sourceRef:
+            kind: HelmRepository
+            name: kubernetes-dashboard
+           version: ">=2.7.0"
+    internal: 30m0s
